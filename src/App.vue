@@ -1,16 +1,18 @@
 <template>
     <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link>
-            <router-link to="/brazil">Brazil</router-link>
-            <router-link to="/hawaii">Hawaii</router-link>
-            <router-link to="/jamaica">jamaica</router-link>
-            <router-link to="/panama">panama</router-link>
-        </div>
+        <TheNavigation/>
         <router-view/>
     </div>
 </template>
+<script>
+    import TheNavigation from "./components/TheNavigation";
 
+    export default {
+        components: {
+            TheNavigation
+        }
+    }
+</script>
 <style>
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -31,6 +33,6 @@
     }
 
     #nav a.router-link-exact-active {
-        color: #42b983;
+        color: red;
     }
 </style>
